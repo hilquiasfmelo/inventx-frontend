@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
 
         <p>
           Organize, edite e planeje todo seu <br />
-          <span>inventário tranquilamente</span>
+          <span> <i>inventário tranquilamente</i> </span>
         </p>
 
         <ButtonStart>Comece aqui!</ButtonStart>
