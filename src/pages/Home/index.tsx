@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { ButtonStart } from '../../components/ButtonStart';
 
@@ -17,11 +18,14 @@ export const Home: React.FC = () => {
 
         <p>
           Organize, edite e planeje todo seu <br />
-          <span> <i>inventário tranquilamente</i> </span>
+          <span>inventário tranquilamente</span>
         </p>
 
-        <ButtonStart>Comece aqui!</ButtonStart>
+        <Link to="/sign-in">
+          <ButtonStart>Comece aqui!</ButtonStart>
+        </Link>
       </Content>
+
 
       <ContentImage>
         <img src={avatar} alt="Avatar" />
