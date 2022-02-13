@@ -12,7 +12,37 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.section`
-  max-width: 600px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  span {
+    margin-bottom: 27px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 5px;
+
+    &.underline {
+      color: var(--white);
+      font-weight: bold;
+      font-size: 1rem;
+      /* margin-bottom: 8px; */
+    }
+
+    &.underline::after {
+      content: '';
+      height: 2px;
+      border-radius: 3px 3px 0 0;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: var(--red-500);
+    }
+  }
 `;
 
 export const ContentImage = styled.div`
