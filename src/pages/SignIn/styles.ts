@@ -12,14 +12,25 @@ export const Container = styled.main`
 `;
 
 export const Content = styled.section`
+  max-width: 600px;
+
+  button {
+    margin-top: 1rem;
+  }
+`;
+
+export const Form = styled.form`
+  margin-top: 20px;
+  padding: 50px;
+  border: 1px solid var(--gray-500);
+  border-radius: 20px 40px;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 
   span {
     margin-bottom: 27px;
-    display: inline-block;
+    display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -29,17 +40,16 @@ export const Content = styled.section`
       color: var(--white);
       font-weight: bold;
       font-size: 1rem;
-      /* margin-bottom: 8px; */
     }
 
     &.underline::after {
       content: '';
       height: 2px;
       border-radius: 3px 3px 0 0;
-      width: 100%;
+      width: 50%;
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 1;
       background: var(--red-500);
     }
   }

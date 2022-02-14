@@ -1,9 +1,9 @@
 import React from 'react';
-import { FaUserAlt, FaLock } from 'react-icons/fa';
+import { FaLock, FaUserAlt } from 'react-icons/fa';
 
-import { Input } from '../../components/input';
+import { Input } from '../../components/Input';
 
-import { Container, Content, ContentImage } from './styles';
+import { Container, Content, Form, ContentImage } from './styles';
 
 import avatar from '../../assets/avatar.svg';
 import logo from '../../assets/logo.svg';
@@ -17,10 +17,12 @@ export const SignIn: React.FC = () => {
       </ContentImage>
 
       <Content>
-        <span className="underline">Já cadastrado? Faça seu login</span>
+        <Form>
+          <span className="underline">Já cadastrado? Faça seu login</span>
 
-        <Input icon={FaUserAlt} type="email" placeholder="Entre com seu username" required />
-        <Input icon={FaLock} type="password" isPassword placeholder="Senha" required />
+          <Input icon={FaUserAlt} type='text' placeholder='Username' required />
+          <Input icon={FaLock} type='password' isPassword placeholder='Senha' required />
+        </Form>
       </Content>
     </Container>
   )
