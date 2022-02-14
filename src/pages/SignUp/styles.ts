@@ -62,13 +62,29 @@ export const FormAction = styled.div`
   color: var(--white);
   font-size: 0.9rem;
   margin-left: 5px;
-  flex: 1;
 
-  strong {
-    color: var(--red-500);
+  a {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    svg {
+      margin-right: 5px;
+      font-size: 0.9rem;
+      color: var(--red-500);
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     &:hover {
       color: ${shade(0.4, '#A4161A')};
+
+      svg {
+        color: var(--white);
+        color: ${shade(0.4, '#fff')};
+        transition: color 0.4s;
+      }
     }
     transition: 0.4s;
   }

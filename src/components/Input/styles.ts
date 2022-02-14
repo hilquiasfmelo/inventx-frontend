@@ -15,8 +15,8 @@ export const Container = styled.div<IContainerProps>`
   border-radius: 10px;
   width: 340px;
   height: 56px;
-  padding: 10px 15px;
-  margin-bottom: 5px;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 0.6rem;
 
   svg {
     color: #666360;

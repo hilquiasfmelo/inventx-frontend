@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLock, FaUserAlt } from 'react-icons/fa';
+import { FaArrowLeft, FaEnvelope, FaLock, FaUserAlt } from 'react-icons/fa';
 
 import { Input } from '../../components/Input';
 
@@ -10,7 +10,7 @@ import logo from '../../assets/logo.svg';
 import { Button } from '../../components/Button';
 import { Link } from 'react-router-dom';
 
-export const SignIn: React.FC = () => {
+export const SignUp: React.FC = () => {
   return (
     <Container>
       <ContentImage>
@@ -20,14 +20,19 @@ export const SignIn: React.FC = () => {
 
       <Content>
         <Form>
-          <span className="underline">Já cadastrado? Faça seu login</span>
+          <span className="underline">Novo por aqui? Faça seu cadastro</span>
 
+          <Input icon={FaUserAlt} type='text' placeholder='Nome completo' required />
           <Input icon={FaUserAlt} type='text' placeholder='Username' required />
+          <Input icon={FaEnvelope} type='email' placeholder='E-mail' required />
           <Input icon={FaLock} type='password' isPassword placeholder='Senha' required />
 
-          <Button>Entrar</Button>
+          <Button>Cadastrar</Button>
           <FormAction>
-            <Link to="/sign-up">Não tem uma conta? <strong>Registre-se</strong> </Link>
+            <Link to="/sign-up">
+              {<FaArrowLeft />}
+              Voltar para login
+            </Link>
           </FormAction>
         </Form>
       </Content>
