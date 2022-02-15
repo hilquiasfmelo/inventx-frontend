@@ -3,7 +3,7 @@ import { FaLock, FaUserAlt } from 'react-icons/fa';
 
 import { Input } from '../../components/Input';
 
-import { Container, Content, Form, FormAction, ContentImage } from './styles';
+import { Container, Content, AnimationContainer, Form, FormAction, ContentImage } from './styles';
 
 import avatar from '../../assets/avatar.svg';
 import logo from '../../assets/logo.svg';
@@ -15,21 +15,25 @@ export const SignIn: React.FC = () => {
     <Container>
       <ContentImage>
         <img src={avatar} alt="Avatar" />
-        <img src={logo} alt="InventX" />
+        <Link to='/'>
+          <img src={logo} alt="InventX" />
+        </Link>
       </ContentImage>
 
       <Content>
-        <Form>
-          <span className="underline">Já cadastrado? Faça seu login</span>
+        <AnimationContainer>
+          <Form>
+            <span className="underline">Já cadastrado? Faça seu login</span>
 
-          <Input icon={FaUserAlt} type='text' placeholder='Username' required />
-          <Input icon={FaLock} type='password' isPassword placeholder='Senha' required />
+            <Input icon={FaUserAlt} type='text' placeholder='Username' required />
+            <Input icon={FaLock} type='password' isPassword placeholder='Senha' required />
 
-          <Button>Entrar</Button>
-          <FormAction>
-            <Link to="/sign-up">Não tem uma conta? <strong>Registre-se</strong> </Link>
-          </FormAction>
-        </Form>
+            <Button>Entrar</Button>
+            <FormAction>
+              <Link to="/sign-up">Não tem uma conta? <strong>Registre-se</strong> </Link>
+            </FormAction>
+          </Form>
+        </AnimationContainer>
       </Content>
     </Container>
   )

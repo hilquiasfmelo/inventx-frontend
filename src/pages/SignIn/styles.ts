@@ -1,5 +1,5 @@
 import { shade } from 'polished';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 export const Container = styled.main`
   max-width: 1120px;
@@ -16,8 +16,28 @@ export const Content = styled.section`
   max-width: 600px;
 
   button {
-    margin-top: 0.9rem;
+    margin-top: 0.5rem;
   }
+`;
+
+const appearFormLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const AnimationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  animation: ${appearFormLeft} 1s;
 `;
 
 export const Form = styled.form`
@@ -58,7 +78,7 @@ export const Form = styled.form`
 
 export const FormAction = styled.div`
   width: 100%;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   color: var(--white);
   font-size: 0.9rem;
   margin-left: 5px;
@@ -79,4 +99,8 @@ export const ContentImage = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  a {
+    cursor: pointer;
+  }
 `;

@@ -3,7 +3,7 @@ import { FaArrowLeft, FaEnvelope, FaLock, FaUserAlt } from 'react-icons/fa';
 
 import { Input } from '../../components/Input';
 
-import { Container, Content, Form, FormAction, ContentImage } from './styles';
+import { Container, Content, AnimationContainer, Form, FormAction, ContentImage } from './styles';
 
 import avatar from '../../assets/avatar.svg';
 import logo from '../../assets/logo.svg';
@@ -19,22 +19,24 @@ export const SignUp: React.FC = () => {
       </ContentImage>
 
       <Content>
-        <Form>
-          <span className="underline">Novo por aqui? Faça seu cadastro</span>
+        <AnimationContainer>
+          <Form>
+            <span className="underline">Novo por aqui? Faça seu cadastro</span>
 
-          <Input icon={FaUserAlt} type='text' placeholder='Nome completo' required />
-          <Input icon={FaUserAlt} type='text' placeholder='Username' required />
-          <Input icon={FaEnvelope} type='email' placeholder='E-mail' required />
-          <Input icon={FaLock} type='password' isPassword placeholder='Senha' required />
+            <Input icon={FaUserAlt} type='text' placeholder='Nome completo' required />
+            <Input icon={FaUserAlt} type='text' placeholder='Username' required />
+            <Input icon={FaEnvelope} type='email' placeholder='E-mail' required />
+            <Input icon={FaLock} type='password' isPassword placeholder='Senha' required />
 
-          <Button>Cadastrar</Button>
-          <FormAction>
-            <Link to="/sign-up">
-              {<FaArrowLeft />}
-              Voltar para login
-            </Link>
-          </FormAction>
-        </Form>
+            <Button>Cadastrar</Button>
+            <FormAction>
+              <Link to="/sign-in">
+                {<FaArrowLeft />}
+                Voltar para login
+              </Link>
+            </FormAction>
+          </Form>
+        </AnimationContainer>
       </Content>
     </Container>
   )
