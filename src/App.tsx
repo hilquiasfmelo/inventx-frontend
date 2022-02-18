@@ -7,12 +7,15 @@ import { Router } from './routes';
 import { GlobalStyle } from './styles';
 import 'react-notifications-component/dist/theme.css';
 import 'animate.css';
+import { AuthProvider } from './hooks/useSignInUser';
 
 export const App: React.FC = () => {
   return (
     <BrowserRouter>
       <ReactNotifications />
-      <Router />
+      <AuthProvider>
+        <Router />
+      </AuthProvider>
       <GlobalStyle />
     </BrowserRouter>
   );

@@ -9,10 +9,10 @@ import avatar from '../../assets/avatar.svg';
 import logo from '../../assets/logo.svg';
 
 import { IUsersForm } from '../../interfaces/Users/IUsersForm';
+import { Store } from 'react-notifications-component';
+import { api } from '../../services/api';
 
 import { Container, Content, AnimationContainer, Form, FormAction, ContentImage } from './styles';
-import { api } from '../../services/api';
-import { Store } from 'react-notifications-component';
 
 export const SignUp: React.FC = () => {
   const navigation = useNavigate();
